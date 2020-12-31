@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas> </canvas>
+    <style>
+      body {
+        margin: o;
+        padding: 0;
+        background-color: #180312;
+      }
+    </style>
+
+    <script>
+      var canvas = document.querySelector("canvas");
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+      var c = canvas.getContext("2d");
+      function animate() {
+        requestAnimationFrame(animate);
+        var a1 = Math.random() * innerWidth;
+        var a2 = Math.random() * innerHeight;
+        var a3 = Math.random() * innerWidth;
+        var a4 = Math.random() * innerHeight;
+        var a5 = Math.random() * innerWidth;
+        var a6 = Math.random() * innerHeight;
+        var a7 = Math.random() * innerWidth;
+        var a8 = Math.random() * innerHeight;
+        var a9 = Math.random() * innerHeight;
+        var a0 = Math.random() * innerWidth;
+        var b1 = Math.random() * innerWidth;
+        var b2 = Math.random() * innerHeight;
+        var b3 = Math.random() * innerWidth;
+        var b4 = Math.random() * innerHeight;
+
+        var radius = Math.random() * 100;
+        c.clearRect(0, 0, innerWidth, innerHeight);
+        c.beginPath();
+        c.arc(a1, a2, radius, 0, Math.PI * 2, false);
+        c.fillStyle = "#ff0000";
+        c.fill();
+        c.beginPath();
+        c.arc(a3, a4, radius, 0, Math.PI * 2, false);
+        c.fillStyle = "#ffae00";
+        c.fill();
+        c.beginPath();
+        c.arc(a5, a6, radius, 0, Math.PI * 2, false);
+        c.fillStyle = "#fffb00";
+        c.fill();
+        c.beginPath();
+        c.arc(a7, a8, radius, 0, Math.PI * 2, false);
+        c.fillStyle = "#2bff00";
+        c.fill();
+        c.beginPath();
+        c.arc(b1, b2, radius, 0, Math.PI * 2, false);
+        c.fillStyle = "#00ffff";
+        c.fill();
+        c.beginPath();
+        c.arc(a0, a9, radius, 0, Math.PI * 2, false);
+        c.fillStyle = "#9a9cff";
+        c.fill();
+        c.beginPath();
+        c.arc(b3, b4, radius, 0, Math.PI * 2, false);
+        c.fillStyle = "#ff00aa";
+        c.fill();
+        if (a1 + radius > innerWidth || a1 - radius < 0) {
+          dx = -dx;
+        }
+        if (a2 + radius > innerHeight || a2 - radius < 0) {
+          dy = -dy;
+        }
+        if (a3 + radius > innerWidth || a3 - radius < 0) {
+          da = -da;
+        }
+        if (a4 + radius > innerHeight || a4 - radius < 0) {
+          db = -db;
+        }
+        if (a5 + radius > innerWidth || a5 - radius < 0) {
+          dc = -dc;
+        }
+        if (a6 + radius > innerHeight || a6 - radius < 0) {
+          dd = -dd;
+        }
+        if (a7 + radius > innerWidth || a7 - radius < 0) {
+          de = -de;
+        }
+        if (a8 + radius > innerHeight || a8 - radius < 0) {
+          df = -df;
+        }
+        if (b1 + radius > innerWidth || b1 - radius < 0) {
+          dg = -dg;
+        }
+        if (b2 + radius > innerHeight || b2 - radius < 0) {
+          dh = -dh;
+        }
+        if (a0 + radius > innerWidth || a0 - radius < 0) {
+          di = -di;
+        }
+        if (a9 + radius > innerHeight || a9 - radius < 0) {
+          dj = -dj;
+        }
+        if (b3 + radius > innerWidth || b3 - radius < 0) {
+          dk = -dk;
+        }
+        if (b4 + radius > innerHeight || b4 - radius < 0) {
+          dl = -dl;
+        }
+        a1 += dx;
+        a2 += dy;
+        a3 += da;
+        a4 += db;
+        a5 += dc;
+        a6 += dd;
+        a7 += de;
+        a8 += df;
+        b1 += dg;
+        b2 += dh;
+        a0 += di;
+        a9 += dj;
+        b3 += dk;
+        b4 += dl;
+      }
+      animate();
+    </script>
+  </body>
+</html>
